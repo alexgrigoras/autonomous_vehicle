@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <ImageView
+        app:srcCompat="@drawable/steering_wheel"
+        android:id="@+id/steering_wheel"
+        android:layout_marginEnd="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_width="160dp"
+        android:layout_height="140dp" />
+
+    <TextView
+        android:id="@+id/parameters"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/steering_wheel"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="7dp"
+        android:layout_weight="0.07"
+        android:text="Car Parameters:"
+        android:textAlignment="viewStart"
+        android:textSize="22dp"
+        android:textStyle="normal|bold" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/steering_wheel"
+        android:layout_marginEnd="35dp">
+
+        <Button
+        android:layout_height="160dp"
+        android:id="@+id/btnBrake"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/brake"
+        android:layout_width="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/steering_wheel"
+        android:contextClickable="false"
+        android:cursorVisible="false"
+        android:fadingEdge="horizontal|vertical"
+        tools:ignore="TextViewEdits"
+        android:layout_weight="1"
+            android:layout_marginRight="40dp" />
+
+        <Button
+        android:layout_height="160dp"
+        android:id="@+id/btnAccel"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/throttle"
+        android:layout_width="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/steering_wheel"
+        android:contextClickable="false"
+        android:cursorVisible="false"
+        android:fadingEdge="horizontal|vertical"
+        tools:ignore="TextViewEdits"
+        android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:layout_marginEnd="53dp"
+        android:layout_alignTop="@+id/parameters"
+        android:layout_toStartOf="@+id/steering_wheel"
+        android:layout_marginTop="15dp"
+        android:id="@+id/linearLayout2">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignTop="@+id/btnConnection"
+            android:layout_toStartOf="@+id/btnAccel"
+            android:layout_weight="1"
+            android:background="@drawable/back_icon"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/btnConnection"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignTop="@+id/steering_wheel"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_toStartOf="@+id/btnBack"
+            android:layout_weight="1"
+            android:background="@drawable/bluetooth_icon"
+            android:fontFamily="casual" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_width="220dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/parameters"
+        android:layout_alignStart="@+id/parameters"
+        android:id="@+id/linearLayout9">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="120dp"
+            android:layout_height="189dp">
+
+            <TextView
+                android:text="Battery:"
+                android:layout_width="match_parent"
+                android:id="@+id/battery_info"
+                android:textSize="18sp"
+                android:layout_weight="1"
+                android:textStyle="normal|bold"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:text="Speed:"
+                android:layout_width="match_parent"
+                android:id="@+id/speed_info"
+                android:textSize="18sp"
+                android:layout_weight="1"
+                android:textStyle="normal|bold"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:text="Distance:"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/fistance_info"
+                android:textSize="18sp"
+                android:layout_weight="1"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:text="Wheels:"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/wheels_info"
+                android:textSize="18sp"
+                android:layout_weight="1"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:text="Direction:"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/direction_info"
+                android:textSize="18sp"
+                android:layout_weight="1"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:text="Connection:"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/connection_info"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:text="Gear:"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/gear_info"
+                android:layout_weight="1"
+                android:textStyle="normal|bold"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="100dp"
+            android:layout_height="200dp">
+
+            <TextView
+                android:text="level"
+                android:layout_width="match_parent"
+                android:id="@+id/battery_text"
+                android:textSize="18sp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:layout_height="27dp" />
+
+            <TextView
+                android:text="m/s"
+                android:layout_width="match_parent"
+                android:id="@+id/speed_text"
+                android:textSize="18sp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:layout_height="27dp" />
+
+            <TextView
+                android:text="m"
+                android:layout_width="match_parent"
+                android:id="@+id/distance_text"
+                android:textSize="18sp"
+                android:layout_height="27dp"
+                android:textColor="@android:color/holo_blue_dark" />
+
+            <TextView
+                android:text="0%"
+                android:layout_width="match_parent"
+                android:id="@+id/wheels_text"
+                android:textSize="18sp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:layout_height="27dp" />
+
+            <TextView
+                android:text="FW"
+                android:layout_width="match_parent"
+                android:id="@+id/direction_text"
+                android:textSize="18sp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:layout_height="27dp" />
+
+            <TextView
+                android:text="None"
+                android:layout_width="match_parent"
+                android:id="@+id/connection_text"
+                android:textSize="18sp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:layout_height="26dp" />
+
+            <TextView
+                android:text="0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gear_text"
+                android:textSize="18sp"
+                android:textColor="@android:color/holo_blue_dark" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/gear_slider"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="50dp"
+        android:thumb="@drawable/gear2"
+        android:paddingLeft="20dp"
+        android:thumbOffset="16dp"
+        android:layout_height="70dp"
+        android:max="5"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/linearLayout"
+        android:layout_marginStart="22dp"
+        android:background="@drawable/seekbg11"
+        android:progressDrawable="@drawable/nothing"
+        android:layout_width="340dp" />
+
+    <ImageView
+        android:id="@+id/batt_error"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/linearLayout2"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/batt_error" />
+
+    <ImageView
+        android:id="@+id/speed_error"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/batt_error"
+        android:layout_marginLeft="35dp"
+        android:layout_toEndOf="@+id/batt_error"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/speed_error" />
+
+    <ImageView
+        android:id="@+id/ultras_error"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/linearLayout9"
+        android:layout_alignStart="@+id/batt_error"
+        android:layout_marginBottom="25dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/ultras_error" />
+
+    <ImageView
+        android:id="@+id/gyro_error"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/speed_error"
+        android:layout_alignTop="@+id/ultras_error"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/gyro_error" />
+
+</RelativeLayout>
+

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dreambuilders.tdbremote">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:allowBackup="true"
+        android:background="@drawable/background"
+        android:icon="@drawable/icon_ok"
+        android:label="TDB Remote"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        // Login Screen
+        <activity
+            android:name=".Login"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        // Menu
+        <activity
+            android:name=".Menu"
+            android:screenOrientation="portrait" />
+        // Manual screen
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="landscape" />
+        // Device list (bluetooth devices)
+        <activity
+            android:name=".DeviceList"
+            android:label="Paired devices"
+            android:theme="@android:style/Theme.Dialog" />
+        // Autonomous screen
+        <activity
+            android:name=".Autonomous"
+            android:screenOrientation="portrait" />
+        // Test screen
+        <activity
+            android:name=".Test"
+            android:screenOrientation="landscape" />
+        // Settings screen - Not implemented yet!
+        <activity
+            android:name=".Settings"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

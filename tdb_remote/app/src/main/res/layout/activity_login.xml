@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.example.dreambuilders.tdbremote.Login">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberPassword"
+        android:ems="10"
+        android:id="@+id/input_password"
+        android:hint="Password"
+        android:layout_marginBottom="52dp"
+        android:layout_above="@+id/btnLogin"
+        android:layout_alignStart="@+id/input_name"
+        style="@android:style/Widget.Holo.EditText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/input_name"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
+        style="@android:style/Widget.Holo.Light.EditText"
+        android:hint="User Name"
+        android:layout_marginBottom="15dp"
+        android:layout_above="@+id/input_password"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        app:srcCompat="@drawable/logo_ok"
+        android:id="@+id/imgLogo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="300dp"
+        android:layout_height="300dp" />
+
+    <Button
+        android:layout_width="120dp"
+        android:id="@+id/btnLogin"
+        android:background="@drawable/login"
+        android:layout_height="45dp"
+        android:layout_marginBottom="59dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

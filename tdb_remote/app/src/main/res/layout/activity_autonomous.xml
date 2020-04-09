@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_autonomous"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dreambuilders.tdbremote.Autonomous"
+    android:background="@drawable/background">
+
+    <TextView
+        android:text="Car Parameters:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/parameters"
+        android:textSize="24sp"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:textStyle="normal|bold"
+        android:layout_marginLeft="10dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_width="210dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/linearLayout4"
+        android:layout_alignTop="@+id/linearLayout10"
+        android:layout_alignStart="@+id/parameters">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_below="@+id/parameters"
+            android:layout_alignParentStart="true"
+            android:layout_height="240dp"
+            android:layout_width="110dp">
+
+            <TextView
+                android:text="Battery:"
+                android:layout_width="match_parent"
+                android:id="@+id/battery_info"
+                android:textSize="18sp"
+                android:layout_height="40dp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:text="Speed:"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/speed_info"
+                android:textSize="18sp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:text="Distance:"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/distance_info"
+                android:textSize="18sp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:text="Wheels:"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/wheels_info"
+                android:textSize="18sp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:text="Direction:"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/direction_info"
+                android:textSize="18sp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:text="Connection:"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/connnection_info"
+                android:textSize="18sp"
+                android:textStyle="normal|bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_alignTop="@+id/linearLayout7"
+            android:layout_toEndOf="@+id/linearLayout7"
+            android:layout_width="100dp"
+            android:layout_height="240dp">
+
+            <TextView
+                android:text="level"
+                android:layout_width="match_parent"
+                android:id="@+id/battery_text"
+                android:textSize="18sp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:textColor="@android:color/holo_blue_dark" />
+
+            <TextView
+                android:id="@+id/speed_text"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="km/h"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="18sp" />
+
+            <TextView
+                android:text="m"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/distance_text"
+                android:textSize="18sp"
+                android:layout_weight="1"
+                android:textColor="@android:color/holo_blue_dark" />
+
+            <TextView
+                android:text="0%"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/wheels_text"
+                android:textSize="18sp"
+                android:textColor="@android:color/holo_blue_dark" />
+
+            <TextView
+                android:text="FW"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/direction_text"
+                android:textSize="18sp"
+                android:textColor="@android:color/holo_blue_dark" />
+
+            <TextView
+                android:text="None"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/connection_text"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:textColor="@android:color/holo_blue_dark" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/parameters"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/linearLayout10">
+
+        <Button
+            android:layout_width="match_parent"
+            android:id="@+id/btnBack"
+            android:background="@drawable/back_icon"
+            android:layout_height="70dp"
+            android:layout_marginTop="27dp"
+            android:paddingTop="120dp"
+            android:layout_weight="1"
+            android:layout_below="@+id/linearLayout3"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:id="@+id/btnConnection"
+            android:background="@drawable/bluetooth_icon"
+            android:layout_height="70dp"
+            android:layout_alignTop="@+id/linearLayout3"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="290dp"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/linearLayout4"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="11dp">
+
+        <TextView
+            android:id="@+id/time_elapsed_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="    Time Elapsed:"
+            android:textSize="20sp"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/time_elapsed_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0 : 0 : 0 s"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="300dp"
+        android:layout_marginBottom="40dp"
+        android:layout_height="155dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout8">
+
+        <SeekBar
+            android:id="@+id/sliderStart"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:accessibilityLiveRegion="assertive"
+            android:animationResolution="@android:integer/config_longAnimTime"
+            android:background="@drawable/seek_bg_start"
+            android:filterTouchesWhenObscured="true"
+            android:hapticFeedbackEnabled="true"
+            android:max="100"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
+            android:progressDrawable="@drawable/nothing"
+            android:scrollbarDefaultDelayBeforeFade="500"
+            android:scrollbarFadeDuration="1000"
+            android:thumb="@drawable/start_small"
+            android:thumbOffset="15dp" />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:id="@+id/sliderStop"
+            android:thumb="@drawable/stop_small"
+            android:background="@drawable/seek_bg_stop"
+            android:thumbOffset="16dp"
+            android:layout_marginTop="15dp"
+            android:max="100"
+            android:progressDrawable="@drawable/nothing"
+            android:layout_height="70dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="26dp"
+        android:layout_below="@+id/linearLayout5"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/batt_error"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignStart="@+id/linearLayout8"
+            android:layout_below="@+id/linearLayout5"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/batt_error" />
+
+        <ImageView
+            android:id="@+id/speed_error"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@+id/batt_error"
+            android:layout_marginRight="20dp"
+            android:layout_toEndOf="@+id/batt_error"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/speed_error" />
+
+        <ImageView
+            android:id="@+id/ultras_error"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignEnd="@+id/linearLayout5"
+            android:layout_alignTop="@+id/speed_error"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/ultras_error" />
+
+        <ImageView
+            android:id="@+id/gyro_error"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@+id/ultras_error"
+            android:layout_toStartOf="@+id/linearLayout10"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/gyro_error" />
+    </LinearLayout>
+
+</RelativeLayout>
