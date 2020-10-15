@@ -6,5 +6,8 @@
 ## Implementation
 Software implemented in Arduino IDE using C/C++ programming language for the controller and Android Studio IDE using Java for smartphone application.
 
+## Documentation
+See [Documentation](documentation.pdf) for mode details.
+
 ## License
 MIT license.
